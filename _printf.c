@@ -3,7 +3,7 @@
 /**
 * _printf - prints arguments passed to it to stdout.
 * @format: printing criteria
-* 
+*
 * Return: Number of characters to be printed.
 */
 

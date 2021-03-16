@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <unistd.h>
 /**
 * _putchar - prints character passed to it.
 * @c: char to be printed.
