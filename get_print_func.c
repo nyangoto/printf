@@ -16,21 +16,21 @@ int get_print_func(char c, char b, va_list args, int len)
   {
       case 'c':
           len = print_char(args, len);
-      break;
+          break;
       case 's':
           len = print_string(args, len);
-      break;
+          break;
       case '%':
           len += _putchar(c);
-      break;
+          break;
       case 'd':
       case 'i':
           len = print_num(args, len);
-      break;
+          break;
       default:
           len += _putchar(b);
           len += _putchar(c);
-      break;
+          break;
   }
   return (len);
 }
