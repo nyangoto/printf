@@ -1,4 +1,4 @@
-.TH man 3 "_printf man page"
+.TH _printf n "16 March 2021" 
 
 .SH NAME
 	printchar, printstr, printint, printNaN
