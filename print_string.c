@@ -8,12 +8,12 @@
 */
 int print_string(va_list args, int len)
 {
-const char *str = va_arg(args, const char *);
+	const char *str = va_arg(args, const char *);
 
-if (str == NULL)
-	str = "(null)";
-while (*str)
-	len += _putchar(*str++);
+	if (str == NULL)
+		str = "(null)";
+	while (*str)
+		len += _putchar(*str++);
 
-return (len);
+	return (len);
 }
