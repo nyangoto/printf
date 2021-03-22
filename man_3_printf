@@ -1,4 +1,4 @@
-.TH _printf n "16 March 2021" 
+.TH _printf 3 "16 March 2021" "holberton curriculum"
 
 .SH NAME
 	printchar, printstr, printint, printNaN
