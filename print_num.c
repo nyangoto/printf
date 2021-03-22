@@ -8,17 +8,17 @@
 */
 unsigned int find_length(unsigned int n, int base)
 {
-unsigned int count;
+	unsigned int count;
 
-count = 0;
-while (n > 0)
-{
-n = n / base;
-if (n == 0)
-	break;
-count++;
-}
-return (count);
+	count = 0;
+	while (n > 0)
+	{
+		n = n / base;
+		if (n == 0)
+			break;
+		count++;
+	}
+	return (count);
 }
 
 /**
@@ -31,10 +31,10 @@ return (count);
 */
 int print_numbers(unsigned long n, unsigned int base, const char *digits)
 {
-if (n >= base)
-	print_numbers((n / base), base, digits);
-_putchar(digits[n % base]);
-return (find_length(n, base) + 1);
+	if (n >= base)
+		print_numbers((n / base), base, digits);
+	_putchar(digits[n % base]);
+	return (find_length(n, base) + 1);
 }
 
 
@@ -47,20 +47,20 @@ return (find_length(n, base) + 1);
 */
 int putchar_int(int n, int len)
 {
-unsigned long num;
+	unsigned long num;
 
-if (n < 0)
-{
-len += _putchar(45);
-num = -(unsigned int)n;
-}
-else
-{
-num = n;
-}
-len += print_numbers(num, 10, "0123456789");
+	if (n < 0)
+	{
+		len += _putchar(45);
+		num = -(unsigned int)n;
+	}
+	else
+	{
+		num = n;
+	}
+	len += print_numbers(num, 10, "0123456789");
 
-return (len);
+	return (len);
 }
 
 /**
@@ -72,10 +72,10 @@ return (len);
 */
 int print_num(va_list args, int len)
 {
-int n;
+	int n;
 
-n = va_arg(args, int);
+	n = va_arg(args, int);
 
-len = putchar_int(n, len);
-return (len);
+	len = putchar_int(n, len);
+	return (len);
 }
